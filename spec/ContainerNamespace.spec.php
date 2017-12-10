@@ -55,6 +55,7 @@ describe('ContainerNamespace', function () {
             $test = $this->namespace->factories();
 
             expect($test)->toEqual([
+                'namespace' => $this->namespace,
                 'namespace.k1' => new ConfigValue('v3'),
                 'namespace.k2' => new ConfigValue('v4'),
                 'namespace.k3' => new ContainerNamespace('namespace.k3', ['k4' => 'v5', 'v6']),

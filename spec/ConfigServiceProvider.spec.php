@@ -27,6 +27,7 @@ describe('ConfigServiceProvider', function () {
         beforeEach(function () {
 
             $this->factories = [
+                'namespace' => new ContainerNamespace('namespace', ['k1' => 'v1', 'k2' => 'v2']),
                 'namespace.k1' => new ConfigValue('v1'),
                 'namespace.k2' => new ConfigValue('v2'),
             ];

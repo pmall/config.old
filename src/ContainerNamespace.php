@@ -99,12 +99,12 @@ class ContainerNamespace
 
                 $namespace = new ContainerNamespace($namespaced, $value);
 
-                return array_merge($factories, [$namespaced => $namespace], $namespace->factories());
+                return array_merge($factories, $namespace->factories());
 
             }
 
             return array_merge($factories, [$namespaced => new ConfigValue($value)]);
 
-        }, []);
+        }, [$this->namespace => $this]);
     }
 }
