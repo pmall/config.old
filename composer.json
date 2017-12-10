@@ -1,0 +1,45 @@
+{
+    "name": "ellipse/config",
+    "type": "library",
+    "description": "Implementation of service provider interop for easily registering configuration values",
+    "keywords": [
+        "psr-11",
+        "service-provider",
+        "container",
+        "configuration"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/ellipsephp/config",
+    "support": {
+        "issues": "https://github.com/ellipsephp/config/issues",
+        "source": "https://github.com/ellipsephp/config"
+    },
+    "authors": [
+        {
+            "name": "Pierre Mallinjoud",
+            "email": "pierre.mallinjoud@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "psr/container": "^1.0",
+        "container-interop/service-provider": "^0.4.0"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^4.0",
+        "eloquent/phony-kahlan": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ellipse\\Config\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
