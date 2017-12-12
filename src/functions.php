@@ -13,3 +13,17 @@ function alias(string $alias) {
     });
 
 };
+
+function resolver(string $alias) {
+
+    return new ConfigServiceFactory(function (ContainerInterface $container) use ($alias) {
+
+        return function () use ($container, $alias) {
+
+            return $container->get($alias);
+
+        };
+
+    });
+
+};
